@@ -8,7 +8,7 @@
         :root {
             --cor-fundo: #fff0f5;
             --cor-primaria: #ff69b4;
-            --cor-texto: #5d5d5d;
+            --cor-texto: #4a4a4a;
         }
 
         body {
@@ -20,16 +20,17 @@
             justify-content: center;
             min-height: 100vh;
             margin: 0;
+            padding: 20px 0;
             overflow-x: hidden;
             color: var(--cor-texto);
         }
 
-        /* Coração feito com código CSS */
+        /* Coração animado do topo */
         .heart-loader {
             position: relative;
             width: 100px;
             height: 90px;
-            margin: 20px;
+            margin: 20px 0 30px 0;
             animation: pulse 1s infinite;
         }
 
@@ -65,13 +66,39 @@
             border-radius: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             text-align: center;
-            max-width: 500px;
+            max-width: 600px;
+            width: 90%;
             z-index: 10;
         }
 
-        h1 { color: var(--cor-primaria); font-size: 1.8rem; }
-        
-        p { line-height: 1.6; font-style: italic; }
+        h1 { 
+            color: var(--cor-primaria); 
+            font-size: 1.8rem; 
+            margin-bottom: 20px;
+        }
+
+        /* Formatação do Poema */
+        .poema {
+            text-align: left;
+            font-style: italic;
+            line-height: 1.8;
+            color: #5d5d5d;
+            background: #fff8fa;
+            padding: 25px;
+            border-left: 4px solid var(--cor-primaria);
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .estrofe {
+            margin-bottom: 20px;
+        }
+
+        .estrofe:last-child {
+            margin-bottom: 0;
+        }
 
         .btn-love {
             background-color: var(--cor-primaria);
@@ -79,27 +106,27 @@
             border: none;
             padding: 15px 30px;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: 0.3s;
-            margin-top: 20px;
             font-weight: bold;
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
         }
 
         .btn-love:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+            box-shadow: 0 6px 15px rgba(255, 105, 180, 0.5);
         }
 
         /* Efeito de corações flutuantes */
         .floating-heart {
             position: fixed;
-            font-size: 20px;
+            font-size: 24px;
             color: var(--cor-primaria);
             user-select: none;
             z-index: 1;
             pointer-events: none;
-            animation: float 4s linear forwards;
+            animation: float linear forwards;
         }
 
         @keyframes float {
@@ -109,9 +136,10 @@
 
         #mensagem-secreta {
             display: none;
-            margin-top: 20px;
+            margin-top: 25px;
             color: #d02090;
             font-weight: bold;
+            font-size: 1.2rem;
             animation: fadeIn 2s;
         }
 
@@ -123,17 +151,52 @@
     <div class="heart-loader"></div>
 
     <div class="container">
-        <h1>Para a dona do melhor tempero...</h1>
-        <p>
-            "O mundo fica menos barulhento quando tua voz aparece.<br>
-            Te amar virou hábito, tipo respirar sem perceber.<br>
-            Eu não acho, Jessica... <b>Eu sei.</b>"
-        </p>
+        <h1>O Alfaiate do "Sim"</h1>
         
-        <button class="btn-love" onclick="soltarCoracoes()">Clique aqui, meu amor</button>
+        <div class="poema">
+            <div class="estrofe">
+                Eu, que sempre fiz das palavras meu abrigo e meu susto,<br>
+                Me vi mudo diante do altar do teu rosto.<br>
+                Você estava linda hoje(12 de junho), eu tô tão triste por alguns motivos,<br>
+                Mas dentro de mim, o silêncio de te olhar finalmente fazia sentido.
+            </div>
+
+            <div class="estrofe">
+                Eu tinha aceitado o breu, minha gaveta cheia de versos mortos,<br>
+                Mas você brotou lótus, tão teimosa, em meio aos meus escombros.<br>
+                E naquele dia, o "eu acho" que eu usava como escudo<br>
+                Caiu por terra. Eu não achava mais nada...<br>
+                Ali, diante de você, eu tive a maior das certezas científicas.
+            </div>
+
+            <div class="estrofe">
+                Lembrei do teu toque que de repente me fez protetor,<br>
+                Do tempero de páprica que você espalha na vida exageradamente,<br>
+                Transformando o trivial em banquete, o nada em obra de arte.<br>
+                E senti uma sorte absurda, um tremor nas mãos também,<br>
+                Um desejo de ser o teu abrigo, e o teu carinho silencioso.
+            </div>
+
+            <div class="estrofe">
+                A pergunta saiu, meio tropeçando, meio voando,<br>
+                E quando o teu "sim" ecoou, o tempo parou de errar o passo.<br>
+                Fiquei feliz de um jeito que nem a Lua saberia explicar,<br>
+                Um brilho que não cabia em estrofe, nem em rima, nem em papel.
+            </div>
+
+            <div class="estrofe">
+                Guardei o poema no bolso por pura vergonha de ser tão seu,<br>
+                Mas hoje eu confesso, sem medo da crítica ou do olhar:<br>
+                Desde aquele 12 de junho, meu bem ,<br>
+                Eu não apenas vivo da minha arte...<br>
+                Eu vivo do amor que você cozinha em mim, todo dia, ao despertar.
+            </div>
+        </div>
+        
+        <button class="btn-love" onclick="soltarCoracoes()">Tenho um segredo pra você...</button>
         
         <div id="mensagem-secreta">
-            Desde aquele 12 de junho, meu coração é seu. <br> Amo você, hoje e sempre! 💖
+            Obrigado por transformar minha vida. Eu te amo, Jessica! 💖
         </div>
     </div>
 
@@ -141,17 +204,22 @@
         function soltarCoracoes() {
             document.getElementById('mensagem-secreta').style.display = 'block';
             
-            for (let i = 0; i < 30; i++) {
+            // Cria 40 corações flutuantes
+            for (let i = 0; i < 40; i++) {
                 setTimeout(() => {
                     const heart = document.createElement('div');
                     heart.className = 'floating-heart';
                     heart.innerHTML = '❤️';
                     heart.style.left = Math.random() * 100 + 'vw';
-                    heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                    // Tamanhos variados
+                    heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                    // Tempos variados para parecer mais natural
+                    heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
                     document.body.appendChild(heart);
                     
-                    setTimeout(() => heart.remove(), 4000);
-                }, i * 100);
+                    // Remove do HTML depois de subir
+                    setTimeout(() => heart.remove(), 5000);
+                }, i * 150);
             }
         }
     </script>
